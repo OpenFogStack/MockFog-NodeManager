@@ -256,7 +256,7 @@ function onClickPlay() {
     var iaasProviderIsOpenStack = isOpenStack;
     console.log("Provider is OpenStack: " + iaasProviderIsOpenStack);
 
-    document.getElementById("log-field-status").innerText = "Loading...";
+    $('#btnShowLog').show();
 
     $.ajax({
         type: 'GET',
