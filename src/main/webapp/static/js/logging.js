@@ -8,17 +8,10 @@ function handleRefreshChange () {
     refreshEnabled = enabled;
 }
 
-function onClickShowLog() {
-    //open logging.html in a new tab
-    var win = window.open("http://" + hostIP + "/logging.html", '_blank');
-    win.focus();
-
-}
-
 function parseAnsibleLog(logdata) {
     var start = "<div> Init";
     var result =  logdata.replace("[?] Task","</div><div class=\"toptask\">[?] Task");
-    result = result.replace("[?] task path","</div><div class=\"detailtask\">[?] task path");
+    result = result.replace("[?] task path","</div><div class=\"detailtask\" style=\"visibility: hidden\">[?] task path");
     var end = "</div>";
     return start + result + end;
 }

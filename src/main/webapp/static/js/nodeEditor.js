@@ -345,6 +345,14 @@ function onClickDestroy() {
     });
 }
 
+
+function onClickShowLog() {
+    //open logging.html in a new tab
+    var win = window.open("http://" + hostIP + "/logging.html", '_blank');
+    win.focus();
+
+}
+
 /**
  * Triggered when we click on the button save on the credentials card
  */
