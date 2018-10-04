@@ -265,7 +265,6 @@ function onClickPlay() {
         success: function(data) {
             console.log(data);
             console.log("Started ansible successfully!");
-            document.getElementById("log-field-status").innerText = data['msg'];
             $('#destroy-button').show();
             moveStepIndicatorOneStepForward('bootstrap', 'assign');
         },
@@ -342,29 +341,6 @@ function onClickDestroy() {
             console.log(error);
             document.getElementById("log-field").innerText = data['msg'];
             console.log("There went something wrong while destroying the setup!");
-        }
-    });
-}
-
-function onClickShowLog() {
-    //open logging.html in a new tab
-    var win = window.open("http://" + hostIP + "/logging.html", '_blank');
-    win.focus();
-
-}
-
-function onClickShowMoreLogs() {
-    $.ajax({
-        type: 'GET',
-        url: BASE_URL + 'process/logs',
-        contentType: 'application/json',
-        success: function(data) {
-            console.log(data);
-            var logField= document.getElementById('log-field');
-            logField.innerText = data['msg'];
-        },
-        error: function (error) {
-            console.log(error);
         }
     });
 }
