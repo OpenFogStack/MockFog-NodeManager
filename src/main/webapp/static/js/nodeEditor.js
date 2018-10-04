@@ -256,7 +256,6 @@ function onClickPlay() {
     var iaasProviderIsOpenStack = isOpenStack;
     console.log("Provider is OpenStack: " + iaasProviderIsOpenStack);
 
-    document.getElementById("log-row").style = "display: visible";
     document.getElementById("log-field-status").innerText = "Loading...";
 
     $.ajax({
@@ -349,7 +348,7 @@ function onClickDestroy() {
 
 function onClickShowLog() {
     //open logging.html in a new tab
-    var win = window.open(NGINX_URL + "logging.html", '_blank');
+    var win = window.open("http://" + hostIP + "/logging.html", '_blank');
     win.focus();
 
 }

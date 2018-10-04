@@ -2605,7 +2605,7 @@ public class ServiceUserInterface extends ServiceCommon {
                 icon = (String)jsonObject.keySet().toArray()[8]; //
             }
             else {
-                throw new ExceptionInvalidData("Invalid Icon chosen. Please select one of " + jsonObject.keySet());
+                throw new ExceptionInvalidData("Invalid Icon chosen (" + device + "). Please select one of " + jsonObject.keySet());
             }
         } catch (IOException e) {
             logger.error("IOException while getting icon from device:", e);
