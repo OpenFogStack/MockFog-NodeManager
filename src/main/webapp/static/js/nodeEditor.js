@@ -347,6 +347,13 @@ function onClickDestroy() {
     });
 }
 
+function onClickShowLog() {
+    //open logging.html in a new tab
+    var win = window.open(NGINX_URL + "logging.html", '_blank');
+    win.focus();
+
+}
+
 function onClickShowMoreLogs() {
     $.ajax({
         type: 'GET',
@@ -355,7 +362,6 @@ function onClickShowMoreLogs() {
         success: function(data) {
             console.log(data);
             var logField= document.getElementById('log-field');
-            logField.style = "display: visible";
             logField.innerText = data['msg'];
         },
         error: function (error) {
