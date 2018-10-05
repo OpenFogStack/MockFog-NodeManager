@@ -494,7 +494,7 @@ function casteNets(nodeObj, nodeId) {
  * @param nodeId
  */
 function castNodes(nodeObj, nodeId, edge) {
-    nodeObj.group = nodeObj.flavor;
+    nodeObj.group = nodeObj.icon;
     nodeObj.id = nodeId;
     nodeObj.addr = edge.addr;
     nodeObj.label = nodeObj.name;
