@@ -1,5 +1,7 @@
 # NodeManager / GUI-REST-Backend
 
+The meta repository can be found at: https://github.com/OpenFogStack/MockFog-Meta
+
 #### Ablauf: NM bereits ausgerollt, Endpoints auf Pfad `:7474/webapi`
 1. POST `/yml-config/{platform:aws|os}` (Call der GUI) 
 2. POST `/doc` (Call der GUI) (JSON Beispiel-Graph in #netzwerkmodell in Slack)
